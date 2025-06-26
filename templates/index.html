@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Compound Interest Calculator</h2>
+        <form method="POST">
+            <label>Principal ($):</label><input type="number" name="principal" step="0.01" required><br>
+            <label>Rate (e.g. 0.05):</label><input type="number" name="rate" step="0.01" required><br>
+            <label>Term (Years):</label><input type="number" name="term" required><br>
+            <label>Compounds per Year:</label><input type="number" name="compound" required><br>
+            <button type="submit">Calculate</button>
+        </form>
+
+        {% if total %}
+            <p><strong>Total Paid:</strong> ${{ total|round(2) }}</p>
+            <p><strong>Interest Paid:</strong> ${{ interest|round(2) }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
