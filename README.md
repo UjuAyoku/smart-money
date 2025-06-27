@@ -1,6 +1,10 @@
 # Compound Interest Calculator
 
-This is a Flask web app that calculates compound interest on a loan or investment based on user inputs: principal amount, interest rate, term (years), and compounds per year.
+Imagine you just took out a loan to purchase a house. The compound interest for your loan will grow exponentially, not quadratically or geometrically.
+For example, if you bought a home that cost $500,000 with a 3.0% interest rate (where interest is applied once per month) for a term of 25 years, you would pay $1,057,509.78 assuming your interest rate is fixed for the 30-year duration.
+That is more than double the original amount — just from interest.
+
+This Flask web app calculates the compound interest on a loan or investment based on user inputs: principal amount, interest rate, term (years), and compounds per year.
 
 
 ## Demo
