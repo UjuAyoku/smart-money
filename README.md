@@ -32,7 +32,7 @@ https://compund-interest-calculator.ujuayoku.repl.co
 - Python 3
 - Flask
 - Tailwind CSS
-- Replit for hosting and deployment
+- Railway for hosting and deployment
 
 
 ## Development
