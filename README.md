@@ -8,7 +8,6 @@ This is a Flask web app that calculates compound interest on a loan or investmen
 Try it live here:  
 https://compund-interest-calculator.ujuayoku.repl.co
 
----
 
 ## Features
 
@@ -18,7 +17,6 @@ https://compund-interest-calculator.ujuayoku.repl.co
 - User-friendly interface with input validation
 - Responsive design using Tailwind CSS
 
----
 
 ## How to Use
 
@@ -28,7 +26,6 @@ https://compund-interest-calculator.ujuayoku.repl.co
 4. Enter the number of **Compounds per Year** (e.g., 12 for monthly compounding)
 5. Click **Calculate** to see the total paid and interest paid
 
----
 
 ## Technologies Used
 
@@ -37,7 +34,6 @@ https://compund-interest-calculator.ujuayoku.repl.co
 - Tailwind CSS
 - Replit for hosting and deployment
 
----
 
 ## Development
 
