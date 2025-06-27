@@ -6,7 +6,7 @@ This is a Flask web app that calculates compound interest on a loan or investmen
 ## Demo
 
 Try it live here:  
-https://compund-interest-calculator.ujuayoku.repl.co
+compound-interest-calculator.up.railway.app
 
 
 ## Features
