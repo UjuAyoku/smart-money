@@ -3,23 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Compound Interest Calculator</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <!-- <link rel="stylesheet" href="/static/style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <h2>Compound Interest Calculator</h2>
-        <form method="POST">
-            <label>Principal ($):</label><input type="number" name="principal" step="0.01" required><br>
-            <label>Rate (e.g. 0.05):</label><input type="number" name="rate" step="0.01" required><br>
-            <label>Term (Years):</label><input type="number" name="term" required><br>
-            <label>Compounds per Year:</label><input type="number" name="compound" required><br>
-            <button type="submit">Calculate</button>
+
+<!-- <body class="bg-white bg-[radial-gradient(black_1px,transparent_1px)] [background-size:5in_5in] min-h-screen flex flex-col items-center px-4 py-10"> -->
+<body class="bg-gray-100 bg-[radial-gradient(black_1px,transparent_1px)] [background-size:5in_5in] min-h-screen flex flex-col items-center px-4 py-10">
+
+    <!-- 💬 Intro Text OUTSIDE the calculator box -->
+    <div class="max-w-2xl text-justify text-gray-800 mb-10">  
+    <!-- <div class="w-full max-w-5xl px-4 md:px-8 text-left text-gray-800 mb-10">  -->
+        <h1 class="text-3xl font-bold mb-4">Compound Interest Calculator</h1>
+        <p class="mb-2">
+            Imagine you just took out a loan to purchase a house. The compound interest for your loan will grow <strong>exponentially</strong>, not quadratically or geometrically.
+        </p>
+        <p class="mb-2">
+            For example, if you bought a home that cost <strong>$500,000</strong> with a <strong>3.0% interest rate</strong> (where interest is applied once per month) for a term of <strong>25 years</strong>, you would pay <strong>$1,057,509.78</strong> assuming your interest rate is fixed for the 30-year duration.
+        </p>
+        <p class="mb-2">
+            That is more than double the original amount — just from interest.
+        </p>
+        <p class="font-medium">
+            Use the calculator below to see how your loan or investment might grow over time.
+        </p>
+    </div>
+
+    <!-- 🧮 Calculator Box -->
+    <div class="bg-gray-900 border-2 border-black p-8 rounded-xl shadow-md w-full max-w-md text-center">
+        <!-- <h2 class="text-2xl font-bold mb-6">Compound Interest Calculator</h2>  -->
+        <form method="POST" class="space-y-4 text-left">
+            <div>
+                <label class="block font-semibold mb-1 text-gray-300">* Principal ($):</label>
+                <input type="number" name="principal" step="0.01" required class="w-full border border-gray-300 p-2 rounded" />
+            </div>
+            <div>
+                <label class="block font-semibold mb-1 text-gray-300">* Rate (e.g. 0.05):</label>
+                <input type="number" name="rate" step="0.0001" required class="w-full border border-gray-300 p-2 rounded" />
+            </div>
+            <div>
+                <label class="block font-semibold mb-1 text-gray-300">* Term (Years):</label>
+                <input type="number" name="term" required class="w-full border border-gray-300 p-2 rounded" />
+            </div>
+            <div>
+                <label class="block font-semibold mb-1 text-gray-300">Compounds per Year:</label>
+                <input type="number" name="compound" value="12" class="w-full border border-gray-300 p-2 rounded" />
+            </div>
+            <button type="submit" class="font-semibold w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">Calculate</button>
         </form>
 
-        {% if total %}
-            <p><strong>Total Paid:</strong> ${{ total|round(2) }}</p>
-            <p><strong>Interest Paid:</strong> ${{ interest|round(2) }}</p>
+        {% if total and interest %}
+        <div class="mt-6 text-left">
+            <p class="font-semibold text-gray-100">Total Paid: <span class="text-green-600">{{ total }}</span></p>
+            <p class="font-semibold text-gray-100">Interest Paid: <span class="text-orange-500">{{ interest }}</span></p>
+        </div>
         {% endif %}
     </div>
 </body>
+
 </html>
