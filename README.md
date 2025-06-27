@@ -2,7 +2,6 @@
 
 This is a Flask web app that calculates compound interest on a loan or investment based on user inputs: principal amount, interest rate, term (years), and compounds per year.
 
----
 
 ## Demo
 
