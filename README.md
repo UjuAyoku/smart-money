@@ -10,7 +10,7 @@ This Flask web app calculates the compound interest on a loan or investment base
 
 ## Demo
 
-Try it live here:  [compound-interest-calculator.up.railway.app](https://compound-interest-calculator.up.railway.app/)
+Try it live here:  [Compound Interest Calculator](https://compound-interest-calculator.up.railway.app/)
 
 
 ## Features
