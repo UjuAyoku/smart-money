@@ -1,4 +1,4 @@
-# Compound Interest Calculator
+# Interest Calculator
 
 Imagine you just took out a loan to purchase a house. The compound interest for your loan will grow exponentially, not quadratically or geometrically.
 
@@ -8,9 +8,9 @@ That is more than double the original amount — just from interest.
 This Flask web app calculates the compound interest on a loan or investment based on user inputs: principal amount, interest rate, term (years), and compounds per year.
 
 
-## Demo
+## Demo Link
 
-Try it live here:  [Compound Interest Calculator](https://compound-interest-calculator.up.railway.app/)
+Available on request
 
 
 ## Features
