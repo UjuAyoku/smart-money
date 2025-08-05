@@ -16,7 +16,7 @@ Example: A $500,000 Home Loan
 
 **Total Repaid**: $1,057,509.78
 
-**→ Interest Paid**: $211,444 (more than the original loan amount!)
+**→ Interest Paid**: $211,444 (more than the original loan amount)
 
 This app helps you calculate the true cost of loans or project investment growth by accounting for compounding.
 
