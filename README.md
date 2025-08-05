@@ -22,10 +22,15 @@ Available on request
 
 ## How to Use
 Input:
+
 1. **Principal amount** 
+
 2. **Annual Interest Rate** 
+
 3. **Loan/investment term** (years)
+
 4. **How often interest compounds** (monthly, quarterly, etc.)
+
 5. Click **Calculate**  
 
 ## Technologies Used
