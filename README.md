@@ -1,35 +1,32 @@
 # Interest Calculator
 
-Imagine you just took out a loan to purchase a house. The compound interest for your loan will grow exponentially, not quadratically or geometrically.
+When you take out a mortgage or loan, compound interest can dramatically increase the total amount you repay, often far beyond the original principal. Unlike simple interest (which grows linearly), compound interest grows exponentially, meaning even a small rate difference can cost you tens of thousands over time.
 
-For example, if you bought a home that cost $500,000 with a 3.0% interest rate (where interest is applied once per month) for a term of 25 years, you would pay $1,057,509.78 assuming your interest rate is fixed for the 30-year duration.
-That is more than double the original amount — just from interest.
+Example: A $500,000 Home Loan
+**Principal**: $500,000
 
-This Flask web app calculates the compound interest on a loan or investment based on user inputs: principal amount, interest rate, term (years), and compounds per year.
+**Interest Rate**: 3.0% (fixed)
 
+**Term**: 25 years
+
+**Compounding**: Monthly
+**Monthly Payment**: $2,371.48 (Amortization-adjusted monthly payments)
+**Total Repaid**: $1,057,509.78
+**→ Interest Paid**: $211,444 (more than the original loan amount!)
+
+This app helps you calculate the true cost of loans or project investment growth by accounting for compounding.
 
 ## Demo Link
 
 Available on request
 
-
-## Features
-
-- Calculate total amount paid including compound interest
-- Calculate total interest paid
-- Supports custom principal, interest rate (up to 4 decimals), loan term, and compounding frequency
-- User-friendly interface with input validation
-- Responsive design using Tailwind CSS
-
-
 ## How to Use
-
-1. Enter the **Principal** (loan or investment amount)
-2. Enter the **Rate** as a decimal (e.g., 0.0675 for 6.75%)
-3. Enter the **Term** in years
-4. Enter the number of **Compounds per Year** (e.g., 12 for monthly compounding)
-5. Click **Calculate** to see the total paid and interest paid
-
+Input:
+1. **Principal amount** 
+2. **Annual Interest Rate** 
+3. **Loan/investment term** (years)
+4. **How often interest compounds** (monthly, quarterly, etc.)
+5. Click **Calculate**  
 
 ## Technologies Used
 
@@ -37,7 +34,6 @@ Available on request
 - Flask
 - Tailwind CSS
 - Railway for hosting and deployment
-
 
 ## Development
 
