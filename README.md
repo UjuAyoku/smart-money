@@ -18,7 +18,7 @@ Example: A $500,000 Home Loan
 
 **→ Interest Paid**: $211,444 (more than the original loan amount)
 
-This app helps you calculate the true cost of loans or project investment growth by accounting for compounding.
+This app helps you make smarter financial decisions, whether you are borrowing, investing, or buying a home (by accounting for compounding).
 
 ## Demo Link
 
