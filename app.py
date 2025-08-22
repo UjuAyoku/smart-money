@@ -8,8 +8,6 @@ import os
 from io import BytesIO
 import base64
 
-import os
-
 app = Flask(__name__)
 
 # Set locale for currency formatting (US)
