@@ -1,63 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Compound Interest Calculator</title>
-    <!-- <link rel="stylesheet" href="/static/style.css"> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <title>Interest Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function setType(type) {
+      document.getElementById('mode').value = type;
+
+      const monthlyDiv = document.getElementById('monthly-payment-field');
+      if (type === 'investment') {
+        monthlyDiv.style.display = 'none';
+      } else {
+        monthlyDiv.style.display = 'block';
+      }
+
+      document.querySelectorAll('.type-button').forEach(btn => btn.classList.remove('bg-orange-500'));
+      document.getElementById(type + '-btn').classList.add('bg-orange-500');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => setType('investment'));
+  </script>
 </head>
+ 
+<body class="bg-gray-100 min-h-screen flex flex-col items-center px-4 py-10">
 
-<!-- <body class="bg-white bg-[radial-gradient(black_1px,transparent_1px)] [background-size:5in_5in] min-h-screen flex flex-col items-center px-4 py-10"> -->
-<body class="bg-gray-100 bg-[radial-gradient(black_1px,transparent_1px)] [background-size:5in_5in] min-h-screen flex flex-col items-center px-4 py-10">
+<!-- Intro Text OUTSIDE the calculator box -->
+<div class="max-w-2xl text-justify text-gray-800 mb-10">  
+<!-- <div class="w-full max-w-5xl px-4 md:px-8 text-left text-gray-800 mb-10">  -->
+    <h1 class="text-3xl font-bold mb-4">SmartMoney</h1>
+    <p class="mb-2">
+        Make smarter financial decisions with SmartMoney. Calculate investment returns, loan interest, and mortgage payments in one place.
+    </p>
+</div>
 
-    <!-- 💬 Intro Text OUTSIDE the calculator box -->
-    <div class="max-w-2xl text-justify text-gray-800 mb-10">  
-    <!-- <div class="w-full max-w-5xl px-4 md:px-8 text-left text-gray-800 mb-10">  -->
-        <h1 class="text-3xl font-bold mb-4">Compound Interest Calculator</h1>
-        <p class="mb-2">
-            Imagine you just took out a loan to purchase a house. The compound interest for your loan will grow <strong>exponentially</strong>, not quadratically or geometrically.
-        </p>
-        <p class="mb-2">
-            For example, if you bought a home that cost <strong>$500,000</strong> with a <strong>3.0% interest rate</strong> (where interest is applied once per month) for a term of <strong>25 years</strong>, you would pay <strong>$1,057,509.78</strong> assuming your interest rate is fixed for the 30-year duration.
-        </p>
-        <p class="mb-2">
-            That is more than double the original amount — just from interest.
-        </p>
-        <p class="font-medium">
-            Use the calculator below to see how your loan or investment might grow over time.
-        </p>
+  <div class="bg-gray-900 border-2 border-black p-8 rounded-xl shadow-md w-full max-w-md">
+    <!-- <h2 class="text-2xl font-bold mb-6 text-center text-white">Interest Calculator</h2> -->
+    <!-- Calculator Box -->
+    <div class="flex justify-between gap-2 mb-6">
+      <button type="button" id="investment-btn" class="type-button px-4 py-2 rounded bg-gray-600 hover:bg-orange-400  text-white" onclick="setType('investment')">Investment</button>
+      <button type="button" id="loan-btn" class="type-button px-4 py-2 rounded bg-gray-600 hover:bg-orange-400  text-white" onclick="setType('loan')">Loan</button>
+      <button type="button" id="mortgage-btn" class="type-button px-4 py-2 rounded bg-gray-600 hover:bg-orange-400  text-white" onclick="setType('mortgage')">Mortgage</button>
     </div>
 
-    <!-- 🧮 Calculator Box -->
-    <div class="bg-gray-900 border-2 border-black p-8 rounded-xl shadow-md w-full max-w-md text-center">
-        <!-- <h2 class="text-2xl font-bold mb-6">Compound Interest Calculator</h2>  -->
-        <form method="POST" class="space-y-4 text-left">
-            <div>
-                <label class="block font-semibold mb-1 text-gray-300">* Principal ($):</label>
-                <input type="number" name="principal" step="0.01" required class="w-full border border-gray-300 p-2 rounded" />
-            </div>
-            <div>
-                <label class="block font-semibold mb-1 text-gray-300">* Rate (e.g. 0.05):</label>
-                <input type="number" name="rate" step="0.0001" required class="w-full border border-gray-300 p-2 rounded" />
-            </div>
-            <div>
-                <label class="block font-semibold mb-1 text-gray-300">* Term (Years):</label>
-                <input type="number" name="term" required class="w-full border border-gray-300 p-2 rounded" />
-            </div>
-            <div>
-                <label class="block font-semibold mb-1 text-gray-300">Compounds per Year:</label>
-                <input type="number" name="compound" value="12" class="w-full border border-gray-300 p-2 rounded" />
-            </div>
-            <button type="submit" class="font-semibold w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">Calculate</button>
-        </form>
+    <form method="POST" class="space-y-4 text-left">
+      <input type="hidden" name="mode" id="mode" value="investment">
 
-        {% if total and interest %}
-        <div class="mt-6 text-left">
-            <p class="font-semibold text-gray-100">Total Paid: <span class="text-green-600">{{ total }}</span></p>
-            <p class="font-semibold text-gray-100">Interest Paid: <span class="text-orange-500">{{ interest }}</span></p>
-        </div>
-        {% endif %}
+      <div>
+        <label class="block font-semibold mb-1 text-gray-300">* Principal ($):</label>
+        <input type="number" name="principal" step="0.01" required class="w-full border border-gray-300 p-2 rounded" placeholder="100,000.00"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1 text-gray-300">* Rate (%):</label>
+        <input type="number" name="rate" step="0.0001" required class="w-full border border-gray-300 p-2 rounded" placeholder="5.00"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1 text-gray-300">* Term (Years):</label>
+        <input type="number" name="term" required class="w-full border border-gray-300 p-2 rounded" placeholder="25"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1 text-gray-300">Compounds per Year:</label>
+        <input type="number" name="compound" class="w-full border border-gray-300 p-2 rounded" placeholder="12"/>
+      </div>
+
+      <div id="monthly-payment-field">
+        <label class="block font-semibold mb-1 text-gray-300">Monthly Payment ($):</label>
+        <input type="number" name="monthly_payment" step="0.01" class="w-full border border-gray-300 p-2 rounded" placeholder="Auto-calculated if empty"/>
+      </div>
+
+      <div class="flex justify-between gap-4">
+        <button type="submit" class="w-1/2 font-semibold bg-black text-white py-2 rounded hover:bg-gray-800 transition">Calculate</button>
+        <button type="button" onclick="clearForm()" class="w-1/2 font-semibold bg-black text-white py-2 rounded hover:bg-gray-800 transition">Clear</button>
+      </div>
+
+    </form>
+
+    {% if total and interest %}
+    <div class="mt-6 text-left">
+    {% if monthly_payment_ %}
+      <p class="font-semibold text-gray-100">Monthly Payment: <span class="text-green-500">{{ monthly_payment_ }}</span></p>
+    {% endif %}
+      <p class="font-semibold text-gray-100">Total Amount: <span class="text-green-500">{{ total }}</span></p>
+      <p class="font-semibold text-gray-100">Interest: <span class="text-orange-400">{{ interest }}</span></p>
+    {% if payment_message %}
+      <p class="font-semibold text-yellow-400 mt-2">{{ payment_message }}</p>
+    {% endif %}
     </div>
+    {% endif %}
+    {% if amortization_chart %}
+    <div id="amortization-chart-container" class="mt-6 hidden md:block"> <!-- hide on Mobile devices-->
+        <!-- <h2 class="text-xl font-semibold text-white mb-2">Amortization Chart</h2>-->
+        <img src="{{ amortization_chart }}" alt="Amortization Chart" class="w-full rounded shadow" />
+    </div>
+    {% endif %}
+
+
+<script>
+  function clearForm() {
+    // Clear all input values
+    const form = document.querySelector("form");
+    form.reset();
+
+    // Hide result and chart if present
+    const chart = document.getElementById("amortization-chart-container");
+    if (chart) chart.style.display = "none";
+
+    const result = document.querySelector(".mt-6.text-left");
+    if (result) result.style.display = "none";
+
+    // Clear the displayed result (if any)
+    const resultDiv = document.querySelector(".mt-6");
+    if (resultDiv) {
+      resultDiv.innerHTML = "";
+    }
+  }
+</script>
+
 </body>
-
 </html>
