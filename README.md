@@ -18,7 +18,7 @@ Example: A $500,000 Home Loan
 
 **→ Interest Paid**: $211,444 (more than the original loan amount)
 
-Whether you are borrowing, investing, or buying a home, this app helps you make smarter financial decisions, 
+Whether you are borrowing, investing, or buying a home, this app helps you make smarter financial decisions.
 
 ## Demo Link
 
