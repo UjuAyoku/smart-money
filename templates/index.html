@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8">
   <title>Interest Calculator</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,10 +22,16 @@
 
     document.addEventListener('DOMContentLoaded', () => setType('investment'));
   </script>
+=======
+    <meta charset="UTF-8">
+    <title>Compound Interest Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+>>>>>>> d359e435a4cab939762728f44c857ad93e6082ec
 </head>
  
 <body class="bg-gray-100 min-h-screen flex flex-col items-center px-4 py-10">
 
+<<<<<<< HEAD
 <!-- Intro Text OUTSIDE the calculator box -->
 <div class="max-w-2xl text-justify text-gray-800 mb-10">  
 <!-- <div class="w-full max-w-5xl px-4 md:px-8 text-left text-gray-800 mb-10">  -->
@@ -45,6 +52,49 @@
 
     <form method="POST" class="space-y-4 text-left">
       <input type="hidden" name="mode" id="mode" value="investment">
+=======
+<body class="bg-gray-100 bg-[radial-gradient(black_1px,transparent_1px)] [background-size:5in_5in] min-h-screen flex flex-col items-center px-4 py-10">
+
+    <!-- 💬 Intro Text OUTSIDE the calculator box -->
+    <div class="max-w-2xl text-justify text-gray-800 mb-10">  
+    <!-- <div class="w-full max-w-5xl px-4 md:px-8 text-left text-gray-800 mb-10">  -->
+        <h1 class="text-3xl font-bold mb-4">Compound Interest Calculator</h1>
+        <p class="mb-2">
+            Imagine you just took out a loan to purchase a house. The compound interest for your loan will grow <strong>exponentially</strong>, not quadratically or geometrically.
+        </p>
+        <p class="mb-2">
+            For example, if you bought a home that cost <strong>$500,000</strong> with a <strong>3.0% interest rate</strong> (where interest is applied once per month) for a term of <strong>25 years</strong>, you would pay <strong>$1,057,509.78</strong> assuming your interest rate is fixed for the 25-year duration.
+        </p>
+        <p class="mb-2">
+            That is more than double the original amount — just from interest.
+        </p>
+        <p class="font-medium">
+            Use the calculator below to see how your loan or investment might grow over time.
+        </p>
+    </div>
+
+    <!-- 🧮 Calculator Box -->
+    <div class="bg-gray-900 border-2 border-black p-8 rounded-xl shadow-md w-full max-w-md text-center">
+        <form method="POST" class="space-y-4 text-left">
+            <div>
+                <label class="block font-semibold mb-1 text-gray-300">* Principal ($):</label>
+                <input type="number" name="principal" step="0.01" required class="w-full border border-gray-300 p-2 rounded" />
+            </div>
+            <div>
+                <label class="block font-semibold mb-1 text-gray-300">* Rate (e.g. 0.05):</label>
+                <input type="number" name="rate" step="0.0001" required class="w-full border border-gray-300 p-2 rounded" />
+            </div>
+            <div>
+                <label class="block font-semibold mb-1 text-gray-300">* Term (Years):</label>
+                <input type="number" name="term" required class="w-full border border-gray-300 p-2 rounded" />
+            </div>
+            <div>
+                <label class="block font-semibold mb-1 text-gray-300">Compounds per Year:</label>
+                <input type="number" name="compound" value="12" class="w-full border border-gray-300 p-2 rounded" />
+            </div>
+            <button type="submit" class="font-semibold w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">Calculate</button>
+        </form>
+>>>>>>> d359e435a4cab939762728f44c857ad93e6082ec
 
       <div>
         <label class="block font-semibold mb-1 text-gray-300">* Principal ($):</label>
