@@ -45,14 +45,14 @@ Available on request
 3.  Set the **Term** (in years).
 4.  In the **Compounds per Year:** field, Enter how often interest is applied in a year:
    
-   | To Compound: | Enter: |
+    | To Compound: | Enter: |
     | :--- | :--- |
     | Monthly | `12` |
     | Quarterly | `4` |
     | Annually | `1` |
     
-6.  (Optional for Loan and Mortgage) Enter the **Monthly Payment** you plan to make.
-7.  Click **Calculate** to see the results, including your monthly payment, total repaid, and total interest.
+5.  (Optional for Loan and Mortgage) Enter the **Monthly Payment** you plan to make.
+6.  Click **Calculate** to see the results, including your monthly payment, total repaid, and total interest.
 
 ## Development
 To run locally:
