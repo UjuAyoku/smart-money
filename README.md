@@ -50,6 +50,7 @@ Available on request
     | Monthly | `12` |
     | Quarterly | `4` |
     | Annually | `1` |
+    
 6.  (Optional for Loan and Mortgage) Enter the **Monthly Payment** you plan to make.
 7.  Click **Calculate** to see the results, including your monthly payment, total repaid, and total interest.
 
