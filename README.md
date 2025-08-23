@@ -45,7 +45,7 @@ Available on request
 3.  Set the **Term** (in years).
 4.  In the **Compounds per Year:** field, Enter how often interest is applied in a year:
    
-    | To Compound: | Enter: |
+    | If Frequency: | Enter: |
     | :--- | :--- |
     | Monthly | `12` |
     | Quarterly | `4` |
