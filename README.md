@@ -32,10 +32,16 @@ Available on request
 </p>
 
 ## Features
-- Calculate the future value of an investment, loan, or mortgage with compound interest.
-- Understand the total interest paid over the full term.
-- Clean, responsive web interface built with Tailwind CSS.
+**Multi-Purpose Calculations**
+    *   **Investment Calculator:** Project the future value of a lump-sum investment or regular contributions with compound interest.
+    *   **Loan Calculator:** Determine your monthly payment for any personal, auto, or student loan.
+    *   **Mortgage Calculator:** Compute monthly P&I (Principal and Interest) payments for a home loan, with options for property tax and insurance.
 
+ **Goal Planning & "What-If" Analysis**
+    *   **Payoff Time Estimator:** Find out how long it will take to be debt-free based on your monthly payment.
+    *   **Extra Payment Impact:** See how making additional payments dramatically reduces your loan term and total interest paid.
+    *   **Interest Rate Comparison:** Compare the cost of loans with different rates and terms.
+    
 ## Technologies Used
 
 - **Backend:** Python 3, Flask
