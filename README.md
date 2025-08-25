@@ -27,6 +27,7 @@ Whether you are borrowing, investing, or buying a home, this app helps you make 
 ## Demo Link
 
 Available on request
+![smartmoney](https://github.com/UjuAyoku/smart-money/blob/main/smartmoney.PNG)
 
 ## Features
 - Calculate the future value of an investment, loan, or mortgage with compound interest.
