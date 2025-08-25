@@ -28,7 +28,7 @@ Whether you are borrowing, investing, or buying a home, this app helps you make 
 
 Available on request
 <p align="center">
-  <img src="https://github.com/UjuAyoku/smart-money/blob/main/smartmoney.PNG" alt="Logo" width="200">
+  <img src="https://github.com/UjuAyoku/smart-money/blob/main/smartmoney.PNG" alt="Logo" width="400">
 </p>
 
 ## Features
