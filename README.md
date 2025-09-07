@@ -7,7 +7,9 @@
 [![Live Demo](https://img.shields.io/badge/Try-Live_Demo-green)]()
 
 </div>
-
+<p align="left">
+  <img src="https://github.com/UjuAyoku/smart-money/blob/main/smartmoney.PNG" alt="Logo" width="400">
+</p>
 When you take out a mortgage or loan, compound interest can dramatically increase the total amount you repay, often far beyond the original principal. Unlike simple interest (which grows linearly), compound interest grows exponentially, meaning even a small rate difference can cost you tens of thousands over time.
 
 Example: A $500,000 Home Loan
