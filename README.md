@@ -94,3 +94,5 @@ Follow these steps to run a copy of this project on your local machine.
 ## License
 
 This project is licensed under the MIT License.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
