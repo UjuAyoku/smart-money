@@ -26,13 +26,6 @@ Example: A $500,000 Home Loan
 
 Whether you are borrowing, investing, or buying a home, this app helps you make smarter financial decisions.
 
-## Demo Link
-
-Available upon request
-<p align="left">
-  <img src="https://github.com/UjuAyoku/smart-money/blob/main/smartmoney.PNG" alt="Logo" width="400">
-</p>
-
 ## Features
 
 **Multi-Purpose Calculations**
